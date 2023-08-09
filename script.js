@@ -7,7 +7,9 @@ hamburger.addEventListener('click',(e)=>{
     header.classList.toggle('change')
 })
 
- document.querySelectorAll('.navbar li').forEach(n => {
-    hamburger.classList.remove('active')
-    header.classList.remove('change')
+ document.querySelectorAll('.navbar li').forEach((n) => {
+    n.addEventListener('click',()=>{
+        hamburger.classList.remove('active')
+        header.classList.remove('change')
+    })
  })
