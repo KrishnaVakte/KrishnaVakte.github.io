@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+    box-sizing: border-box;
+    color:white;
+    scroll-behavior: smooth;
+}
+/* common  */
+
+.line{
+  border: 1px solid  rgb(96, 93, 93);
+  box-shadow: -2px 2px rgb(72, 70, 70);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+
+.section-title{
+  margin: 2rem;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+
+/* header section  */
+header{
+  position: sticky;
+  top: 0rem;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.navbar{
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar li{
+    list-style: none;
+}
+
+
+.navbar li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: -2px 2px gray;
+    transition: all 0.2s ease-in-out;
+    font-size: large;
+}
+
+.navbar li a:hover{
+    color: aqua;
+    text-shadow: -3px 3px gray;
+}
+
+
+  /* hero section  */
+
+  
+  .dp{
+    background-image: url("krishna.jpeg");
+    background-size: cover;
+    height: 320px;
+    width: 320px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    margin: 1.6rem;
+  }
+
+  .name{
+    width: 100%;
+    margin: 10px 0px;
+    text-align: center;
+  }
+
+
+  /* education section  */
+
+  .card-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 25%;
+    border: 2px solid aqua;
+    border-radius: 35px;
+    padding: 1.7rem;
+    height:  250px;
+    box-shadow: -3px -3px 2px 2px rgba(247, 247, 247, 0.83);
+    margin: 20px;
+  }
+
+  /* skills section  */
+
+.skill-card{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skill-card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 300px; */
+  padding: 30px 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 30px;
+  row-gap: 40px;
+  width: 80%;
+  box-shadow: -2px -2px 2px 2px whitesmoke;
+  margin: 20px;
+  .card-container{
+    width: 100%;
+  }
+}
+
+/* certificate section  */
+
+.certi-card{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 40%;
+  margin: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 20px;
+}
+.seeAll-button a{
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: x-large;
+  color: #005eff;
+}
+
+.seeAll-container{
+  border: none;
+}
+
+/* Contact Section  */
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+input,textarea{
+  width: 100%;
+  border: 3px solid gray;
+  border-radius: 20px;
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  color: black;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.submit-btn{
+  padding: 20px;
+  margin: 20px;
+  background-color: aqua;
+  border: 2px solid rgba(7, 217, 241, 0.751);
+  border-radius: 20px;
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+/* Responsive Design */
+
+@media only screen and (max-width:930px) {
+ .card-container{
+    flex-direction: column;
+    
+  }
+  .skill-card{
+    width: 40%;
+  }
+  .skill-container{
+    align-items: center;
+    row-gap: 30px;
+  }
+  
+}
+
+@media only screen and (max-width:700px){
+  /* Hamburger menu  */
+
+  .burger{
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    position: fixed;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    border-radius: 15%;
+    padding: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .bar{
+    height:3px;
+    width:90%;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.2s ease;
+  }
+
+  .active .bar:nth-child(1){
+    transform: translateY(4px) rotate(45deg);
+  }
+  .active .bar:nth-child(3){
+    transform: translateY(-5px) rotate(-45deg);
+  }
+  
+  .active .bar:nth-child(2){
+    display: none;
+  }
+
+  .navbar{
+    visibility: hidden;
+  }
+
+  .change .navbar{
+    height: 70vh;
+    width: 100%;
+    background-color: #000000;
+    flex-direction: column;
+    visibility: visible;
+  }
+  .change .navbar li a{
+    background-color: #000000;
+    border: 2px transparent white;
+    padding: 10px;
+  }
+
+  .change .navbar li a:hover{
+    text-shadow: white;
+    color: rgb(170, 255, 1);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
