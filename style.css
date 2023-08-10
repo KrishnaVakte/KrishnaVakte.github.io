@@ -10,6 +10,10 @@
 }
 /* common  */
 
+h1,h2{
+  text-align: center;
+}
+
 .line{
   border: 1px solid  rgb(96, 93, 93);
   box-shadow: -2px 2px rgb(72, 70, 70);
@@ -21,6 +25,7 @@
   justify-content: space-around;
   align-items: center;
   margin: 1rem;
+  gap: 1rem;
 }
 
 .section-title{
@@ -79,13 +84,17 @@ header{
     width: 320px;
     border: 2px solid orange;
     border-radius: 50%;
-    margin: 1.6rem;
+    /* margin: 1.6rem; */
   }
 
   .name{
     width: 100%;
     margin: 10px 0px;
     text-align: center;
+  }
+
+  .info{
+    text-align: justify;
   }
 
 
@@ -193,13 +202,13 @@ input,textarea{
 }
 
 .submit-btn{
-  padding: 20px;
+  padding: 10px 20px;
   margin: 20px;
   background-color: aqua;
   border: 2px solid rgba(7, 217, 241, 0.751);
-  border-radius: 20px;
+  border-radius: 10px;
   color: black;
-  font-size: large;
+  font-size: larger;
   font-weight: bold;
   cursor: pointer;
 }
@@ -275,10 +284,15 @@ input,textarea{
     flex-direction: column;
     visibility: visible;
   }
+  .navbar li a{
+    font-size: xx-small;
+  }
+  
   .change .navbar li a{
     background-color: #000000;
     border: 2px transparent white;
     padding: 10px;
+    font-size: unset;
   }
 
   .change .navbar li a:hover{
@@ -301,7 +315,13 @@ input,textarea{
     width: 260px;
   }
 
+  h2{
+    font-size: 2ch;
+  }
   .section-title{
-    font-size: larger;
+    font-size: x-large;
+  }
+  .container{
+    margin: 10px;
   }
 }
